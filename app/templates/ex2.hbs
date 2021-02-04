@@ -1,0 +1,25 @@
+{{page-title "Ex2"}}
+<div class="card">
+  <div class="card-body">
+    <h1 class="card-title">Services</h1>
+    <div class="alert alert-primary">
+      <div class="item">Choisissez les éléments à inclure</div>
+      <div class="item">{{plural @model.countActive
+                                 'Aucun service sélctionné'
+                                  'service séléctionné'
+                                  'services séléctionnés'}}</div>
+    </div>
+    <ul class="list-group">
+      {{#each @model.services as |service|}}
+
+        <li class="list-group-item {{if service.active 'active' ''}}" {{action "toggleActive" service}}>{{service.name}} {{service.price}}</li>
+      {{/each}}
+    </ul>
+    <div>{{format-currency @model.sumActive}}</div>
+    <Textarea placeholder="Code promo"></Textarea>
+    <input class="btn-primary" type="button" value="Valider">
+  </div>
+</div>
+
+
+{{outlet}}
