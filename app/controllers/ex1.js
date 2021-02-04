@@ -26,12 +26,7 @@ export default class Ex1Controller extends Controller {
     this.content = "";
     this.info = "";
   }
-  @action
-  save(){
-    console.log(this.content);
-    this.content = this.content;
-    this.info = "Contenu sauvegardé";
-  }
+
   @action
   update(){
     console.log("update");
