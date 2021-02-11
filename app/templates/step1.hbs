@@ -1,0 +1,28 @@
+{{page-title "Step1"}}
+<h1>Sélectionnez vos produits</h1>
+<div class="form-row">
+  <div class="inline-block">
+    <label>
+      Produits disponibles :
+      <MultiSelect @elements={{this.dispoItems}}
+                    @selected={{this.dispoItems_}}
+                    @onChange={{this.changeDispo}}/>
+    </label>
+  </div>
+  <div class="inline-block">
+    <button class="btn btn-primary list-btn" {{action "add" this.dispoItems this.includedItems this.dispoItems_}}><div class="glyphicon glyphicon-step-forward" ></div></button><br>
+    <button class="btn btn-primary list-btn" {{action "add" this.dispoItems this.includedItems this.dispoItems}}><div class="glyphicon glyphicon-fast-forward" ></div></button><br>
+    <button class="btn btn-primary list-btn" {{action "add" this.includedItems this.dispoItems this.includedItems_}}><div class="glyphicon glyphicon-step-backward" ></div></button><br>
+    <button class="btn btn-primary list-btn" {{action "add" this.includedItems this.dispoItems this.includedItems}}><div class="glyphicon glyphicon-fast-backward" ></div></button>
+  </div>
+  <div class="inline-block">
+    <label>
+      Produits à inclure :
+      <MultiSelect @elements={{this.includedItems}}
+                   @selected={{this.includedItems_}}
+                   @onChange={{this.changeIncluded}}/>
+    </label>
+  </div>
+  <button class="btn btn-primary">Passer à l'étape suivante</button>
+</div>
+{{outlet}}
