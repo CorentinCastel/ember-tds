@@ -17,7 +17,7 @@
     </ul>
     <div>{{format-currency @model.sumActive}}</div>
     <Textarea placeholder="Code promo"></Textarea>
-    <input class="btn-primary" type="button" value="Valider">
+    <button class="btn btn-primary" value="Valider" {{action "togglePromo"}}/>
   </div>
 </div>
 

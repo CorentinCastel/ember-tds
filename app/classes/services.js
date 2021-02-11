@@ -1,7 +1,13 @@
+import { promos } from "../data/data";
+
 export default class Services {
   services = [];
-  constructor(services) {
+  promos = {};
+  @tracked codePromo;
+
+  constructor(services, promos) {
     this.services = services;
+    this.promos = promos;
   }
 
   get countActive() {
