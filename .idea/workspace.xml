@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76853a6a-318a-45a6-a3a9-2c9e6ca5676d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/application.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/step1.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/step1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/step2.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/step2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/step1.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/step1.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/step2.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/step2.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +64,8 @@
       <workItem from="1612427344063" duration="653000" />
       <workItem from="1612428010733" duration="100000" />
       <workItem from="1612428112620" duration="8521000" />
-      <workItem from="1613026927414" duration="14336000" />
+      <workItem from="1613026927414" duration="14408000" />
+      <workItem from="1613567205819" duration="1070000" />
     </task>
     <servers />
   </component>
@@ -79,6 +82,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
