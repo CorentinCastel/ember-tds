@@ -1,3 +1,10 @@
 {{page-title "Categories"}}
-
+<BsNav @type="tabs" as |nav|>
+  <nav.item>
+    <nav.link-to @route="categories.contacts" @model="category_id">Tab 1</nav.link-to>
+  </nav.item>
+  <nav.item>
+    <nav.link-to >Tab 2</nav.link-to>
+  </nav.item>
+</BsNav>
 {{outlet}}

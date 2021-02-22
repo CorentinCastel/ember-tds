@@ -1,14 +1,13 @@
 import Route from '@ember/routing/route';
-import MyCategories from 'td1/classes/contacts';
 import { action } from '@ember/object';
 
 export default class CategoriesRoute extends Route {
   model(){
-    return new MyCategories(this.store.findAll('categories'));
+    return this.store.findAll('category');
   }
 
   afterModel(model){
-
+    this.transitionTo("categories.contacts", model.get('firstObject'));
   }
 
   @action delete(category){

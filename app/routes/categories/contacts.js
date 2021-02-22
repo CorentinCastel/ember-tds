@@ -8,7 +8,7 @@ export default class CategoriesContactsRoute extends Route {
   }
 
   setupController(controller, model){
-
+    controller.set('datas', model.contacts);
   }
 
   willTransition(){
@@ -24,7 +24,7 @@ export default class CategoriesContactsRoute extends Route {
   }
 
   @action update(category, contact){
-
+    this.transitionTo("categories.contacts.update", category.filterBy('contact_id', contact.id));
   }
 
   @action confirmDeletion(contacts){
