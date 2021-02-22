@@ -29,6 +29,9 @@
         <td>
           <button class="btn btn-danger" {{action "cancelDeletion" @model.deleteds}}>Annuler la suppression ({{@model.deletedsCount}})</button>
         </td>
+        <td>
+          <button class="btn btn-success" {{action "confirmDeletion" @model.deleteds}}>Confirmer la suppression ({{@model.deletedsCount}})</button>
+        </td>
       {{/if}}
     </tr>
   </tbody>
