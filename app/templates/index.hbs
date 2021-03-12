@@ -2,12 +2,12 @@
 <form class="ui form">
   <div class="field">
     <label for="id">Nom d'utilisateur</label>
-    <input type="text" id="id">
+    <Input @value={{@model.username}} placeholder="Entrez votre nom"/>
   </div>
   <div class="field">
     <label for="pass">Mot de passe</label>
-    <input type="password" id="pass">
+    <Input @value={{@model.pass}} placeholder="Entrez votre email"/>
   </div>
-  <button class="ui button" type="submit">Connecter</button>
+  <button class="ui button" {{action "connect" @model}}>Connecter</button>
 </form>
 {{outlet}}
