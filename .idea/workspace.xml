@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce640c13-7e84-455f-aa73-39988f340d91" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/employee.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/abstractroute.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/abstractroute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/board.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/board.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/board.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/logout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/logout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/logout.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +55,7 @@
       <workItem from="1615550764889" duration="312000" />
       <workItem from="1615551087857" duration="751000" />
       <workItem from="1615553793734" duration="6464000" />
-      <workItem from="1616069246256" duration="4427000" />
+      <workItem from="1616069246256" duration="5431000" />
     </task>
     <servers />
   </component>
