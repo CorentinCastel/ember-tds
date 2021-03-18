@@ -1,2 +1,33 @@
 {{page-title "Sections"}}
+<div class="ui green segment">
+  <span class="ui label">{{this.email}}</span>
+  <button class="ui black button" {{action "logout"}}>
+    Logout
+  </button>
+</div>
+<div class="ui secondary menu">
+  <div class="item">
+    <h1>Store</h1>
+  </div>
+  <div class="right menu">
+    <button class="ui button secondary" {{action "board"}}>Retour sur le tableau de bord</button>
+  </div>
+</div>
+<fieldset class="ui segment"><legend>Gestion des sections</legend>
+  <div class="ui container">
+    <button class="ui green button" {{action "add"}}>Nouvelle section</button>
+    <button class="ui green button" {{action "addProduct"}}>Nouveau produit</button>
+  </div>
+  <div class="ui container">
+    <table class="ui table">
+      {{#each @model as |sections|}}
+        <tr>
+          <td>{{sections.name}} {{sections.description}}</td>
+          <td><button class="ui secondary button" {{action "edit" @sections.id}}>Editer</button></td>
+          <td><button class="ui red button" {{action "delete" @sections.id}}><i class="trash icon"></i></button> </td>
+        </tr>
+      {{/each}}
+    </table>
+  </div>
+</fieldset>
 {{outlet}}
