@@ -1,12 +1,9 @@
 import Route from '@ember/routing/route';
-import UserAuthService from "../services/user-auth";
+import { inject as service } from '@ember/service';
 
 
 export default class AbstractrouteRoute extends Route {
-  @services userAuth;
-  model(){
-    this.userAuth = new UserAuthService();
-  }
+  @service userAuth;
   redirect() {
     if (!this.userAuth.isAuth) {
       this.transitionTo('index');

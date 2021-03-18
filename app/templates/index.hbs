@@ -1,13 +1,13 @@
 {{page-title "Index"}}
-<form class="ui form">
+<form class="ui form" {{action "login" @model on="submit"}}>
   <div class="field">
     <label for="id">Nom d'utilisateur</label>
-    <Input @value={{@model.username}} placeholder="Entrez votre nom"/>
+    <Input type="email" @value={{@model.email}} placeholder="Entrez votre email"/>
   </div>
   <div class="field">
     <label for="pass">Mot de passe</label>
-    <Input @value={{@model.pass}} placeholder="Entrez votre email"/>
+    <Input type="password" @value={{@model.password}} placeholder="Entrez votre mot de passe"/>
   </div>
-  <button class="ui button" {{action "connect" @model}}>Connecter</button>
+  <button class="ui button" type="submit">Connecter</button>
 </form>
 {{outlet}}
