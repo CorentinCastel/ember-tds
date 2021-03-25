@@ -2,7 +2,7 @@
 <br>
 <div class="ui container">
   <div>Êtes-vous sûr de vouloir supprimer cette section et ses {{@model.length}} éléments ?</div>
-  <button class="ui button red" {{action "confirm" @model}}> Confirmer </button>
+  <button class="ui button red" {{action "confirm"}}> Confirmer </button>
   <button class="ui button secondary" {{action "annuler"}}>Annuler</button>
 </div>
 {{outlet}}

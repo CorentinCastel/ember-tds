@@ -10,7 +10,7 @@
     <h1>Store</h1>
   </div>
   <div class="right menu">
-    <button class="ui button secondary" {{action "board"}}>Retour sur le tableau de bord</button>
+    <LinkTo class="ui button secondary" @route="board">Retour sur le tableau de bord</LinkTo>
   </div>
 </div>
 <fieldset class="ui segment"><legend>Gestion des sections</legend>
@@ -25,7 +25,7 @@
         <tr>
           <td><strong>{{sections.name}}</strong><div style="font-size: smaller">{{sections.description}}</div></td>
           <td><button class="ui secondary button" {{action "edit" sections.id}}>Editer</button></td>
-          <td><LinkTo @route="sections.delete" @model={{sections.id}} class="ui red button"><i class="trash icon"></i></LinkTo> </td>
+          <td><LinkTo {{action "delete" sections}} @route="sections.delete" @model={{sections.id}} class="ui red button"><i class="trash icon"></i></LinkTo> </td>
         </tr>
       {{/each}}
     </table>

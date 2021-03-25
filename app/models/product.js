@@ -1,4 +1,4 @@
-import Model, { attr } from '@ember-data/model';
+import Model, { attr, belongsTo } from '@ember-data/model';
 
 export default class ProductModel extends Model {
   @attr('String') name;
@@ -7,4 +7,5 @@ export default class ProductModel extends Model {
   @attr('number') price;
   @attr('number') promotion;
   @attr('number') idSection;
+  @belongsTo('section') section;
 }

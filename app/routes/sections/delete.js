@@ -1,15 +1,9 @@
 import Route from '@ember/routing/route';
 import { action } from "@ember/object";
+import Abstractroute from "../abstractroute";
 
-export default class SectionsDeleteRoute extends Route {
+export default class SectionsDeleteRoute extends Abstractroute {
   model(params){
-    this.sectionid = params.section_id;
-    console.log(params);
-    console.log(this.store.query('product', {
-      filter: {
-        idSection: params.section_id
-      }
-    }));
     return this.store.query('product', {
       filter: {
         idSection: params.section_id
@@ -17,17 +11,14 @@ export default class SectionsDeleteRoute extends Route {
     });
   }
 
-  @action confirm(data){
-    console.log(data);
-    let section = this.store.query('section', {
-      filter: {
-        id: data.idSection
-      }
+  @action confirm(){
+    let section = this.store.findAll('section');
+    section.forEach((s)=>{
+      s.save();
     });
-    console.log(section);
-    section.deleteRecord();
-    section.save().then(() => {
-      this.transitionTo("sections");
-    });
+  }
+
+  @action annuler(){
+    this.transitionTo("sections");
   }
 }

@@ -1,4 +1,4 @@
-import Route from '@ember/routing/route';
+import Abstractroute from "../abstractroute";
 
-export default class SectionsAddProductRoute extends Route {
+export default class SectionsAddProductRoute extends Abstractroute {
 }

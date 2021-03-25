@@ -3,11 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ce640c13-7e84-455f-aa73-39988f340d91" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/sections.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sections.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/section.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/section.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/sections.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/sections/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/add.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/sections/add-product.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/add-product.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/sections/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/sections/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/edit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/sections.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/sections/add.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections/add.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/sections/delete.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections/delete.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +63,7 @@
       <workItem from="1615553793734" duration="6464000" />
       <workItem from="1616069246256" duration="10696000" />
       <workItem from="1616080395984" duration="696000" />
-      <workItem from="1616672821808" duration="8082000" />
+      <workItem from="1616672821808" duration="11755000" />
     </task>
     <servers />
   </component>
