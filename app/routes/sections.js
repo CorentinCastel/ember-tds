@@ -1,4 +1,5 @@
 import Abstractroute from './abstractroute';
+import { action } from "@ember/object";
 
 
 export default class SectionsRoute extends Abstractroute {
@@ -6,5 +7,8 @@ export default class SectionsRoute extends Abstractroute {
     return this.store.findAll('section');
   }
 
+  @action add(){
+    this.transitionTo("sections.add");
+  }
 
 }

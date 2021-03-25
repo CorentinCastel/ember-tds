@@ -18,16 +18,16 @@
     <button class="ui green button" {{action "add"}}>Nouvelle section</button>
     <button class="ui green button" {{action "addProduct"}}>Nouveau produit</button>
   </div>
+  {{outlet}}
   <div class="ui container">
     <table class="ui table">
       {{#each @model as |sections|}}
         <tr>
-          <td>{{sections.name}} {{sections.description}}</td>
-          <td><button class="ui secondary button" {{action "edit" @sections.id}}>Editer</button></td>
-          <td><button class="ui red button" {{action "delete" @sections.id}}><i class="trash icon"></i></button> </td>
+          <td><strong>{{sections.name}}</strong><div style="font-size: smaller">{{sections.description}}</div></td>
+          <td><button class="ui secondary button" {{action "edit" sections.id}}>Editer</button></td>
+          <td><LinkTo @route="sections.delete" @model={{sections.id}} class="ui red button"><i class="trash icon"></i></LinkTo> </td>
         </tr>
       {{/each}}
     </table>
   </div>
 </fieldset>
-{{outlet}}

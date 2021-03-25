@@ -1,2 +1,18 @@
 {{page-title "Add"}}
+<br>
+<div class="ui form">
+  <div class="two fields">
+    <div class="field">
+      <Input class="form-control" type="text" placeholder="Nom de la section" @value={{@model.name}}/>
+    </div>
+    <div class="field">
+      <Textarea class="form-control" placeholder="Description de la section" @value={{@model.description}}></Textarea>
+    </div>
+  </div>
+</div>
+<div class="ui container">
+  <button class="ui button green" {{action "save" @model}}> Enregister </button>
+  <button class="ui button secondary" {{action "annuler"}}>Annuler</button>
+</div>
+
 {{outlet}}
