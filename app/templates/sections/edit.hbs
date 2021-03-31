@@ -1,2 +1,12 @@
 {{page-title "Edit"}}
+{{#each @model as |product|}}
+  <tr>
+    <td>
+      <img src="/assets/ressources/{{product.image}}.jpg" width="170" height="130"/>
+  </td>
+    <td><strong>{{product.name}}</strong><div style="font-size: smaller">{{product.price}}€</div></td>
+    <td><LinkTo @route="sections.edit.edit" @model={{product.id}} class="ui secondary button">Éditer</LinkTo></td>
+    <td>DELETE {{product.idSection}}</td>
+  </tr>
+{{/each}}
 {{outlet}}

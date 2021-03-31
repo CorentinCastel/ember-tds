@@ -10,11 +10,16 @@ export default class SectionsDeleteRoute extends Abstractroute {
       }
     });
   }
+  async deleteProducts(products) {
+    while (products.firstObject) {
+      let p = products.firstObject;
+      await p.destroyRecord();
+    }
+  }
 
-  @action confirm(){
-    let section = this.store.findAll('section');
-    section.forEach((s)=>{
-      s.save();
+  @action confirm(section){
+    this.deleteProducts(section.products).then(() => {
+      section.destroyRecord();
     });
   }
 

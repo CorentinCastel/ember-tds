@@ -24,7 +24,7 @@
       {{#each @model as |sections|}}
         <tr>
           <td><strong>{{sections.name}}</strong><div style="font-size: smaller">{{sections.description}}</div></td>
-          <td><button class="ui secondary button" {{action "edit" sections.id}}>Editer</button></td>
+          <td><LinkTo @route="sections.edit" @model={{sections.id}} class="ui secondary button">Éditer</LinkTo></td>
           <td><LinkTo {{action "delete" sections}} @route="sections.delete" @model={{sections.id}} class="ui red button"><i class="trash icon"></i></LinkTo> </td>
         </tr>
       {{/each}}
