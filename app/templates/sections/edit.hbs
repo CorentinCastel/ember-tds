@@ -1,4 +1,8 @@
 {{page-title "Edit"}}
+{{outlet}}
+<div class="ui container">
+  <LinkTo @route="sections.edit.addProduct" class="ui green button">Nouveau produit</LinkTo>
+</div>
 {{#each @model as |product|}}
   <tr>
     <td>
@@ -6,7 +10,6 @@
   </td>
     <td><strong>{{product.name}}</strong><div style="font-size: smaller">{{product.price}}€</div></td>
     <td><LinkTo @route="sections.edit.edit" @model={{product.id}} class="ui secondary button">Éditer</LinkTo></td>
-    <td>DELETE {{product.idSection}}</td>
+    <td><LinkTo @route="sections.edit.delete" @model={{product.id}} class="ui red button"><i class="trash icon"></i></LinkTo></td>
   </tr>
 {{/each}}
-{{outlet}}

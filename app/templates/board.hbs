@@ -5,7 +5,14 @@
     Logout
   </button>
 </div>
-<h2>Orders</h2>
+<div class="ui secondary menu">
+  <div class="item">
+    <h1>Orders</h1>
+  </div>
+  <div class="right menu">
+    <LinkTo class="ui button green" @route="sections">Gérer le store</LinkTo>
+  </div>
+</div>
 <ul>
   {{#each @model.orders as |order|}}
     <li>

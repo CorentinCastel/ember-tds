@@ -1,0 +1,33 @@
+{{page-title "AddProduct"}}
+<br>
+<div class="ui form">
+  <div class="two fields">
+    <div class="field">
+      <Input class="form-control" type="text" placeholder="Nom du produit" @value={{@model.name}}/>
+    </div>
+    <div class="field">
+      <Textarea class="form-control" placeholder="Description du produit" @value={{@model.comments}}></Textarea>
+    </div>
+  </div>
+  <div class="two fields">
+    <div class="field">
+      <Input class="form-control" type="number" placeholder="Stock du produit" @value={{@model.stock}}/>
+    </div>
+    <div class="field">
+      <Input class="form-control" type="number" placeholder="Prix du produit" @value={{@model.price}}/>
+    </div>
+  </div>
+  <div class="two fields">
+    <div class="field">
+      <Input class="form-control" type="number" placeholder="Promo du produit" @value={{@model.promotion}}/>
+    </div>
+    <div class="field">
+      <Input class="form-control" type="text" placeholder="Nom de l'image" @value={{@model.image}}/>
+    </div>
+  </div>
+</div>
+<div class="ui container">
+  <button class="ui button green" {{action "save" @model}}> Enregister </button>
+  <button class="ui button secondary" {{action "annuler"}}>Annuler</button>
+</div>
+{{outlet}}
