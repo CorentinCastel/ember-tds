@@ -26,6 +26,7 @@
           <td><LinkTo @route="sections.edit" @model={{sections.id}} class="ui secondary button">Éditer</LinkTo></td>
           <td><LinkTo {{action "delete" sections}} @route="sections.delete" @model={{sections.id}} class="ui red button"><i class="trash icon"></i></LinkTo> </td>
         </tr>
+        {{outlet sections.id}}
       {{/each}}
     </table>
   </div>

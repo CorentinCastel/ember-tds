@@ -2,7 +2,7 @@
 <br>
 <div class="ui container">
   <div>Êtes-vous sûr de vouloir supprimer ce produit ({{@model.product.name}}) ?</div>
-  <button class="ui button red" {{action "confirm" @model}}> Confirmer </button>
-  <button class="ui button secondary" {{action "annuler" @model}}>Annuler</button>
+  <button class="ui button red" {{action "confirm" @model.product}}> Confirmer </button>
+  <button class="ui button secondary" {{action "annuler" @model.product}}>Annuler</button>
 </div>
 {{outlet}}

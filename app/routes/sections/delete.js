@@ -4,7 +4,7 @@ import Abstractroute from "../abstractroute";
 
 export default class SectionsDeleteRoute extends Abstractroute {
   model(params){
-    return this.store.query('product', {
+    return this.store.findRecord('product', {
       filter: {
         idSection: params.section_id
       }

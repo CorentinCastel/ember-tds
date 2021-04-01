@@ -3,28 +3,22 @@ import { action } from '@ember/object';
 import RSVP from "rsvp";
 
 export default class SectionsEditDeleteRoute extends Route {
-  model(params){
+  model(params) {
     console.log(params.product_id);
     return RSVP.hash({
-      product: this.store.query('product', {
-        filter: { id: params.product_id }
-      })
+      product: this.store.findRecord('product', params.product_id),
+      section: this.store.findRecord('section', 1)
     });
   }
 
   @action annuler(product){
-    this.transitionTo("sections.edit", {section_id: product.idSection});
+    this.transitionTo("sections.edit", product.section.get('id'));
   }
 
   @action confirm(product){
-    if(Array.isArray(product)){
-      product[0].deleteRecord().save();
-    }
-    else{
-      console.log("else");
-      product.deleteRecord().save();
-    }
+    let idSection = product.section.get('id');
+      product.destroyRecord();
 
-    this.transitionTo("sections.edit", {section_id: product.idSection});
+    this.transitionTo("sections.edit", idSection);
   }
 }
