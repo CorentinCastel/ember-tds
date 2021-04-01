@@ -1,13 +1,16 @@
 import Route from '@ember/routing/route';
 import { action } from '@ember/object';
+import RSVP from 'rsvp';
 
 export default class SectionsEditAddProductRoute extends Route {
   model(){
-    return {};
+    return RSVP.hash( {
+      sections: this.store.findAll('section'),
+      products: this.store.findAll('product'),
+    });
   }
 
   @action save(data){
-    data.idSection = 1;
     let product = this.store.createRecord('product', data);
     product.save().then(()=>{
       this.transitionTo('sections');
