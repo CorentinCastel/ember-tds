@@ -3,10 +3,18 @@ import { action } from '@ember/object';
 import RSVP from "rsvp";
 
 export default class SectionsEditDeleteRoute extends Route {
+  product;
+  renderTemplate(){
+    console.log(this.product.get('name'));
+    this.render({outlet: this.product.get('name')});
+  }
+
   model(params) {
     console.log(params.product_id);
+    console.log(this.store.findRecord('product', params.product_id));
+    this.product = this.store.findRecord('product', params.product_id);
     return RSVP.hash({
-      product: this.store.findRecord('product', params.product_id),
+      product: this.product,
       section: this.store.findRecord('section', 1)
     });
   }

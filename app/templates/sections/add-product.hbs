@@ -1,0 +1,28 @@
+{{page-title "AddProduct"}}
+<br>
+<div class="ui form">
+  <UiDropdown class="selection" @selected={{@model.section}} @onChange={{fn (mut @model.section)}} as |execute mapper|>
+    <div class="default text">Section</div>
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      {{#each @model.sections as |section|}}
+        <div data-value="{{map-value mapper section}}" class="item">
+          {{section.name}}
+        </div>
+      {{/each}}
+    </div>
+  </UiDropdown>
+  <div class="two fields">
+    <div class="field">
+      <Input class="form-control" type="text" placeholder="Nom du produit" @value={{@model.name}}/>
+    </div>
+    <div class="field">
+      <Input class="form-control" type="number" placeholder="Prix du produit" @value={{@model.price}}/>
+    </div>
+  </div>
+</div>
+<div class="ui container">
+  <button class="ui button green" {{action "save" @model}}> Enregister </button>
+  <button class="ui button secondary" {{action "annuler"}}>Annuler</button>
+</div>
+{{outlet}}

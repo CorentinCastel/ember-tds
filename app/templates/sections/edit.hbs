@@ -1,15 +1,28 @@
 {{page-title "Edit"}}
-{{outlet}}
+
 <div class="ui container">
-  <LinkTo @route="sections.edit.addProduct" class="ui green button">Nouveau produit</LinkTo>
-</div>
-{{#each @model as |product|}}
-  <tr>
-    <td>
-      <img src="/assets/ressources/{{product.image}}.jpg" width="170" height="130"/>
-  </td>
-    <td><strong>{{product.name}}</strong><div style="font-size: smaller">{{product.price}}€</div></td>
-    <td><LinkTo @route="sections.edit.edit" @model={{product.id}} class="ui secondary button">Éditer</LinkTo></td>
-    <td><LinkTo @route="sections.edit.delete" @model={{product.id}} class="ui red button"><i class="trash icon"></i></LinkTo></td>
-  </tr>
+  <LinkTo @route="sections.edit.addProduct" @model="{{@model.idSection}}" class="ui green button">Nouveau produit</LinkTo>
+  <div class="ui form">
+    <div class="field">
+      <Input class="form-control" type="text" @value={{@model.section.name}}></Input>
+    </div>
+    <a class="ui button green" {{action "editSection" @model.section}}>Modifier</a>
+  </div>
+
+  {{outlet}}
+  <table class="ui table">
+{{#each @model.products as |product|}}
+
+    <tr>
+      <td class="">
+        <img src="/assets/ressources/{{product.image}}.jpg" width="170" height="130"/>
+    </td>
+      <td class="ten wide"><strong>{{product.name}}</strong><div style="font-size: smaller">{{product.price}}€</div></td>
+      <td><LinkTo {{action "reset" product.id}} @route="sections.edit.edit" @model={{product.id}} class="ui secondary button">Éditer</LinkTo></td>
+      <td><LinkTo @route="sections.edit.delete" @model={{product.id}} class="ui red button"><i class="trash icon"></i></LinkTo></td>
+    </tr>
+  {{outlet (concat "product" product.id)}}
+
 {{/each}}
+  </table>
+</div>

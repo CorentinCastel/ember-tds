@@ -19,4 +19,10 @@ export default class SectionsRoute extends Abstractroute {
     this.transitionTo("sections.edit");
   }
 
+  @action reset(idSection){
+    this.transitionTo("sections").then(()=>{
+      this.transitionTo("sections.edit", idSection);
+    });
+  }
+
 }

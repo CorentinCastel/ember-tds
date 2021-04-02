@@ -3,11 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="ce640c13-7e84-455f-aa73-39988f340d91" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/sections.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/sections/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/delete.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/sections/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/sections/edit/add-product.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/edit/add-product.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/sections/edit/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/edit/delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/sections/edit/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/edit/edit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/sections.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/sections/edit/delete.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections/edit/delete.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/sections/delete.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections/delete.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/sections/edit.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections/edit.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/sections/edit/add-product.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections/edit/add-product.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/sections/edit/edit.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/sections/edit/edit.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +75,8 @@
       <workItem from="1617179500969" duration="8880000" />
       <workItem from="1617263790331" duration="6519000" />
       <workItem from="1617310828816" duration="2199000" />
-      <workItem from="1617314202661" duration="3942000" />
+      <workItem from="1617314202661" duration="4339000" />
+      <workItem from="1617358121948" duration="10156000" />
     </task>
     <servers />
   </component>

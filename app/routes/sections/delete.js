@@ -1,15 +1,20 @@
 import Route from '@ember/routing/route';
 import { action } from "@ember/object";
 import Abstractroute from "../abstractroute";
+import RSVP from 'rsvp';
 
 export default class SectionsDeleteRoute extends Abstractroute {
   model(params){
-    return this.store.findRecord('product', {
-      filter: {
-        idSection: params.section_id
-      }
+    return RSVP.hash({
+      section:this.store.findRecord('section', params.section_id),
+      products:this.store.query('product', {
+        filter:{
+          idSection: params.section_id
+        }
+      })
     });
   }
+
   async deleteProducts(products) {
     while (products.firstObject) {
       let p = products.firstObject;
@@ -20,6 +25,8 @@ export default class SectionsDeleteRoute extends Abstractroute {
   @action confirm(section){
     this.deleteProducts(section.products).then(() => {
       section.destroyRecord();
+    }).then(()=>{
+      this.transitionTo("sections");
     });
   }
 

@@ -16,18 +16,17 @@
 <fieldset class="ui segment"><legend>Gestion des sections</legend>
   <div class="ui container">
     <button class="ui green button" {{action "add"}}>Nouvelle section</button>
+    <LinkTo @route="sections.addProduct" class="ui green button">Nouveau produit</LinkTo>
   </div>
   {{outlet}}
-  <div class="ui container">
     <table class="ui table">
       {{#each @model as |sections|}}
         <tr>
           <td><strong>{{sections.name}}</strong><div style="font-size: smaller">{{sections.description}}</div></td>
-          <td><LinkTo @route="sections.edit" @model={{sections.id}} class="ui secondary button">Éditer</LinkTo></td>
-          <td><LinkTo {{action "delete" sections}} @route="sections.delete" @model={{sections.id}} class="ui red button"><i class="trash icon"></i></LinkTo> </td>
+          <td><LinkTo {{action "reset" sections.id}} @route="sections.edit" @model={{sections.id}} class="ui secondary button">Éditer</LinkTo></td>
+          <td><LinkTo @route="sections.delete" @model={{sections.id}} class="ui red button"><i class="trash icon"></i></LinkTo> </td>
         </tr>
         {{outlet sections.id}}
       {{/each}}
     </table>
-  </div>
 </fieldset>

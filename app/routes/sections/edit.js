@@ -1,16 +1,29 @@
 import Abstractroute from "../abstractroute";
 import { action } from "@ember/object";
+import RSVP from 'rsvp';
 
 export default class SectionsEditRoute extends Abstractroute {
-  renderTemplate(params){
-    this.render({outlet: 2});
+  idSection;
+  renderTemplate(){
+    this.render({outlet: this.idSection});
   }
   model(params){
-    console.log(params.section_id);
-    return this.store.query("product", {
-      filter: {
-        idSection: params.section_id
-      }
+    this.idSection = params.section_id;
+    return RSVP.hash({
+      products:this.store.query("product", {
+        filter: {
+          idSection: params.section_id
+        }
+      }),
+      idSection:params.section_id,
+      section:this.store.findRecord("section", params.section_id)
+    });
+  }
+
+  @action editSection(section){
+    console.log(section.get('name'));
+    section.save().then(()=>{
+      this.transitionTo("sections")
     });
   }
 
@@ -22,5 +35,11 @@ export default class SectionsEditRoute extends Abstractroute {
 
   @action annuler(){
     this.transitionTo("sections");
+  }
+
+  @action reset(idProduct){
+    this.transitionTo("sections.edit", this.idSection).then(()=>{
+      this.transitionTo("sections.edit.edit", idProduct);
+    });
   }
 }
