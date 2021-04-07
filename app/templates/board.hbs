@@ -5,21 +5,12 @@
     Logout
   </button>
 </div>
-<div class="ui secondary menu">
-  <div class="item">
-    <h1>Orders</h1>
-  </div>
-  <div class="right menu">
+<div class="ui grid">
+  <div class="eight wide column">
     <LinkTo class="ui button green" @route="sections">Gérer le store</LinkTo>
   </div>
+  <div class="eight wide column">
+    <LinkTo class="ui button green" @route="myOrders">Gérer les commandes</LinkTo>
+  </div>
 </div>
-<ul>
-  {{#each @model.orders as |order|}}
-    <li>
-      <LinkTo @route="order" @model={{order.id}}>
-        {{order.dateCreation}} <span class="ui circular label">{{order.count}}</span>
-      </LinkTo>
-    </li>
-  {{/each}}
-</ul>
 {{outlet}}

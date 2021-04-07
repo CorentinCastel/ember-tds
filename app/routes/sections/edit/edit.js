@@ -1,6 +1,7 @@
 import Route from '@ember/routing/route';
 import { action } from '@ember/object';
-export default class SectionsEditEditRoute extends Route {
+import AbstractrouteRoute from "../../abstractroute";
+export default class SectionsEditEditRoute extends AbstractrouteRoute {
 
   product;
   renderTemplate(){
