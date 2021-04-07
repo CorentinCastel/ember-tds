@@ -23,7 +23,7 @@
       {{#each @model as |sections|}}
         <tr>
           <td><strong>{{sections.name}}</strong><div style="font-size: smaller">{{sections.description}}</div></td>
-          <td><LinkTo {{action "reset" sections.id}} @route="sections.edit" @model={{sections.id}} class="ui secondary button">Éditer</LinkTo></td>
+          <td><a {{action "resetSect" sections.id}}  class="ui secondary button">Éditer</a></td>
           <td><LinkTo @route="sections.delete" @model={{sections.id}} class="ui red button"><i class="trash icon"></i></LinkTo> </td>
         </tr>
         {{outlet sections.id}}

@@ -11,15 +11,7 @@ export default class SectionsRoute extends Abstractroute {
     this.transitionTo("sections.add");
   }
 
-  @action delete(section){
-    //section.deleteRecord()
-  }
-
-  @action edit(section){
-    this.transitionTo("sections.edit");
-  }
-
-  @action reset(idSection){
+  @action resetSect(idSection){
     this.transitionTo("sections").then(()=>{
       this.transitionTo("sections.edit", idSection);
     });
