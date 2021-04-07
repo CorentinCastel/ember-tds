@@ -4,7 +4,14 @@ import Abstractroute from "../abstractroute";
 import RSVP from 'rsvp';
 
 export default class SectionsDeleteRoute extends Abstractroute {
+
+  idSection;
+  renderTemplate(){
+    this.render({outlet: this.idSection});
+  }
+
   model(params){
+    this.idSection = params.section_id;
     return RSVP.hash({
       section:this.store.findRecord('section', params.section_id),
       products:this.store.query('product', {

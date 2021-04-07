@@ -2,7 +2,8 @@
 <div class="ui container">
   <div class="ui form">
     <div class="field">
-      <Input class="form-control" type="text" @value={{@model.name}}></Input>
+      <Input class="form-control" type="text" @value={{@model.name}}/>
+      <Input class="form-control" type="number" @value={{@model.price}}/>
     </div>
     <a class="ui button green" {{action "editProduct" @model}}>Modifier</a>
   </div>

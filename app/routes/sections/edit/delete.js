@@ -5,8 +5,8 @@ import RSVP from "rsvp";
 export default class SectionsEditDeleteRoute extends Route {
   product;
   renderTemplate(){
-    console.log(this.product.get('name'));
-    this.render({outlet: this.product.get('name')});
+    console.log(this.product.get('id'));
+    this.render({outlet: "product"+this.product.get('id')});
   }
 
   model(params) {
