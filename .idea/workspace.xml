@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ce640c13-7e84-455f-aa73-39988f340d91" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/orderdetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/orderdetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/sections/add-product.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/add-product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/sections/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/sections/edit/add-product.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/edit/add-product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/sections/edit/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/edit/delete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/sections/edit/edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/sections/edit/edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/serializers/orderdetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/serializers/orderdetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/board.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/board.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/order.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/my-orders.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/my-orders.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/order.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/routes/order-test.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +21,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1obysM3FoNMhEapZfHng8O2XpCK" />
   <component name="ProjectViewState">
@@ -76,7 +84,8 @@
       <workItem from="1617314202661" duration="4339000" />
       <workItem from="1617358121948" duration="10333000" />
       <workItem from="1617372829510" duration="645000" />
-      <workItem from="1617811207713" duration="4365000" />
+      <workItem from="1617811207713" duration="4752000" />
+      <workItem from="1617895060036" duration="6127000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,48 @@
+{{page-title "Prepare"}}
+<div class="ui grid">
+  <div class="four wide column">
+    <div class="ui attached segment">
+      <h2>Client</h2>
+    </div>
+    <div class="ui attached blue segment">
+      <span>{{@model.order.user.name}}</span>
+      <br>
+      <span>{{@model.order.user.email}}</span>
+      <br>
+      <br>
+    </div>
+  </div>
+  <div class="twelve wide column">
+    <div class="ui attached segment">
+      <h2>Commande</h2>
+    </div>
+    <div class="ui attached segment green">
+      <span>Commande n°{{@model.order.id}}</span>
+      <br>
+      <span>{{@model.order.amount}}€</span>
+      <br>
+      <span>{{@model.order.itemsNumber}} produit(s)</span>
+    </div>
+  </div>
+</div>
+
+<div class="ui top attached segment">
+  <h2>A preparer</h2>
+</div>
+<div class="ui attached red segment">
+    {{#each @model.products as |product|}}
+      <div class="ui grid">
+        <div class="ui three wide column">
+          <img src="/assets/ressources/{{product.image}}.jpg" width="170" height="130"/>
+        </div>
+        <div class="ui five wide column">
+          <span>{{product.name}} {{product.price}}</span>
+        </div>
+
+      </div>
+      {{outlet sections.id}}
+    {{/each}}
+</div>
+
+
+{{outlet}}

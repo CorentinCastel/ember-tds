@@ -20,6 +20,10 @@ Router.map(function () {
     });
     this.route('addProduct');
   });
-  this.route('order', {path:'order/:order_id'});
-  this.route('myOrders');
+  this.route('myOrders', function() {
+    this.route('prepare', {path:'prepare/:order_id'}, function() {
+      this.route('cancel');
+      this.route('prepared');
+    });
+  });
 });

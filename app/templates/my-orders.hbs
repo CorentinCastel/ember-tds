@@ -2,7 +2,7 @@
 <ul>
   {{#each @model.orders as |order|}}
     <li>
-      <LinkTo @route="order" @model={{order.id}}>
+      <LinkTo @route="myOrders.prepare" @model={{order.id}}>
         {{order.dateCreation}} <span class="ui circular label">{{order.count}}</span>
       </LinkTo>
     </li>
